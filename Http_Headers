@@ -1,0 +1,41 @@
+HTTP HEADERS
+
+HTTP headers are key-value pairs sent in HTTP requests and responses. They provide essential information about the request or response, such as content type, authentication, caching policies, and more. Headers help the client and server communicate effectively.
+________________________________________
+DIFFERENT TYPES OF HTTP HEADERS
+
+•	General Headers: Apply to both requests and responses (e.g., Date, Connection).
+•	Request Headers: Provide information about the client or the resource being requested (e.g., User-Agent, Accept).
+•	Response Headers: Provide information about the server or the response itself (e.g., Location, Server).
+•	Entity Headers: Contain information about the body of the resource (e.g., Content-Type, Content-Length).
+________________________________________
+3. What is the purpose of the Content-Type header?
+Answer:
+The Content-Type header indicates the media type of the resource being sent. It tells the client how to interpret the data in the body of the request or response. For example, Content-Type: application/json specifies that the data is in JSON format.
+________________________________________
+4. Explain the difference between Cache-Control and Expires headers.
+Answer:
+•	Cache-Control: Provides directives for caching mechanisms in both requests and responses. It allows for more granular control, such as no-cache, no-store, max-age, etc.
+•	Expires: Specifies a date and time after which the response is considered stale. It is a simpler, older way of controlling caching. If both are present, Cache-Control takes precedence.
+________________________________________
+5. What is the User-Agent header, and why is it important?
+Answer:
+The User-Agent header contains a string that identifies the client application (e.g., browser, library) making the request. It can include information about the software version and the operating system. This information helps servers tailor responses for different clients and track usage analytics.
+________________________________________
+6. How does the Authorization header work?
+Answer:
+The Authorization header is used to provide credentials for authenticating a user agent with a server. Common schemes include Basic (username and password encoded in Base64) and Bearer (used with OAuth tokens). This header helps secure APIs by ensuring that only authorized users can access certain resources.
+________________________________________
+7. What is the Location header used for?
+Answer:
+The Location header is typically used in HTTP responses to indicate the URL to which a client should redirect. It is commonly used with 3xx status codes, such as 301 (Moved Permanently) or 302 (Found), to direct clients to a new resource location.
+________________________________________
+8. Can you explain what CORS is and how it relates to HTTP headers?
+Answer:
+Cross-Origin Resource Sharing (CORS) is a security feature that allows or restricts resources requested from another domain. It relies on specific HTTP headers, such as Access-Control-Allow-Origin, which tells the browser which origins are permitted to access the resource. This mechanism helps prevent cross-site scripting attacks.
+________________________________________
+9. What are custom HTTP headers?
+Answer:
+Custom HTTP headers are user-defined headers that allow clients and servers to send additional information not covered by standard headers. They typically start with "X-", such as X-Custom-Header. However, the "X-" prefix is no longer recommended, and custom headers can be defined without it.
+________________________________________
+
